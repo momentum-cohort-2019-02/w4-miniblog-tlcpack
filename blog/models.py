@@ -31,7 +31,7 @@ class Comment(models.Model):
 
     blog = models.ForeignKey('Blog', on_delete=models.SET_NULL, null=True)
 
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
 
 class Author(models.Model):
     user_name = models.CharField(max_length=50)
