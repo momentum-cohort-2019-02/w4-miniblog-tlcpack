@@ -29,7 +29,7 @@ class Blog(models.Model):
 class Comment(models.Model):
     text = models.TextField(max_length=10000, help_text='Please add a friendly comment')
 
-    blog = models.ForeignKey('Blog', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey('User', on_delete=models.SET_NULL, null=True)
 
     date = models.DateField(auto_now_add=True)
 
